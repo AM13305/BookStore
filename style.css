@@ -14,10 +14,11 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    z-index: 999;
+    z-index: 0;
     padding: 10px 200px;
     width: 100%;
     position: fixed;
+    top:0;
 }
 
 header a{
@@ -34,7 +35,7 @@ header a:hover{
 .Nav a{
     font-size: 1.2em;
     font-weight: 600;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .Logo i{
@@ -116,6 +117,7 @@ h1{
 .AboutUs{
 background: url("https://t4.ftcdn.net/jpg/01/46/40/35/240_F_146403506_381OxD624hppWMQcIbjLuSr8TCW1q2lj.jpg");   
  background-size: cover;
+ height: 38.6em;
 }
 .AboutUs h1{
     color:darkblue;
@@ -127,7 +129,7 @@ background: url("https://t4.ftcdn.net/jpg/01/46/40/35/240_F_146403506_381OxD624h
     font-weight: 800;
 }
 .About p{
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: 500;
 }
 .Contact{
@@ -166,16 +168,17 @@ background: url("https://t4.ftcdn.net/jpg/01/46/40/35/240_F_146403506_381OxD624h
 .Info h3{
     margin-bottom: 10px;
 }
-footer{
-    background-color: black;
-    font-size: 1.2em;
-    font-weight: 600;
-    color: bisque;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
+footer {
+  background-color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: bisque;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
+
 
 .Form {
   background-color: white;
@@ -191,6 +194,7 @@ legend {
   text-align: center;
 }
 
+input[type ="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -198,6 +202,14 @@ input[type="password"] {
   margin-top: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+input[type="date"]{
+     width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
 }
 
 button {
@@ -228,4 +240,103 @@ button:hover {
 }
 fieldset{
     border: none;
+}
+.Welcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    border-top: 62px solid white;
+}
+.welimg img{
+    width: 28em;
+    height: 275px;
+    object-fit: cover;
+    padding-left: 10px;
+}
+
+.Weltext{
+    color: aliceblue;
+    text-align: left;
+}
+.Weltext h2{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+.Weltext h3{
+    font-size: 2em;
+    font-weight: 800;
+      animation: colorChange 3s infinite;
+}
+/* Keyframes define the color cycle */
+@keyframes colorChange {
+  0%   { color: crimson; }
+  25%  { color: darkorange; }
+  50%  { color: forestgreen; }
+  75%  { color: royalblue; }
+  100% { color: crimson; }
+}
+.Search {
+  border-radius: 10px;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.Search:focus {
+  border-color: crimson;
+  box-shadow: 0 0 8px rgba(220, 20, 60, 0.4);
+  transform: scale(1.1,1);
+}
+.Search::placeholder{
+    font-size: 1.1em;
+}
+.Product{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 10px
+}
+.Product img{
+   width: 14em; 
+   margin-bottom: 20px;
+}
+.Product h2{
+    margin-bottom: 10px;
+    color: brown;
+
+}
+.Product h3{
+    margin-bottom: 25px;
+    color: rgb(0, 0, 0);
+}
+.Product p{
+    margin-bottom: 10px;
+    color: rgb(50, 165, 42);
+
+}
+.Sell {
+    border-radius: 10px;
+    border: 5px solid rgb(167, 7, 7);
+    margin: 50px auto; /* center horizontally + vertical spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 900px; /* control total width */
+    padding: 30px 40px; /* reduce padding */
+    background-color: white; /* optional background */
+    margin-top: 100px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 50em;
+  background-color: black;
 }
